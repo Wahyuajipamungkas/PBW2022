@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+ <html>
+  <head>
+     <title>HTML 5 - Multimedia</title>
+  </head>
+  <body>
+     <h1>Video - HTML 5</h1>
+	 <p>
+	     <button type="button" onclick="playVid()">Play Vidieo</button>
+		 <button type="button" onclick="pauseVid()">Pause Vidieo</button>
+		 <button type="button" onclick="duration()">Duration</button>
+		 <button type="button" onclick="controlOn()">Control On</button>
+		 <button type="button" onclick="controlOf()">Control OFF</button>
+		 </p>
+     <video width="420" controls autoplay >
+	  <source src="cat-herd.webm" type="video/webm">
+	  <track src="cat-herd-id.srt" kind="subtitles" srclang="id" label="Indonesia"/>
+	   file not support
+	   </video>
+   </body>
+   <script>
+      var vid = documen.getElementById("myvideo")
+	  function playVid() {
+	         vid.play();
+			 vid.loop = true;
+	  }
+	  function playVid() {
+	         vid.pause();
+	  }
+	  function duration() {
+	         alert(vid.duration);
+	  }
+	  funcition controlOn() {
+	         vid.controls = true;
+			 vid.load();
+	  }
+	  function controlOf() {
+	         vid.controls = false;
+			 vid.load();
+	  }
+	  </script>
+	  
+</html>
