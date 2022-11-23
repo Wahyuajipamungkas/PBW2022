@@ -23,7 +23,7 @@ nav ul{
     margin-top: 0px;
 }
 
-nav ul li a{
+nav ul li a:hover{
     display: block;
     color: #000;
     padding: 8px 16px;
@@ -32,8 +32,8 @@ nav ul li a{
 
 article{
     float: left;
-    width: 80px;
-    border: 1px solid green;
+    width: 80%;
+    border: 2px solid green;
     background-color: beige;
     padding: 0 20px;
 }
@@ -44,4 +44,10 @@ footer{
 
 .satu{
     font-family: 'Times New Roman';
+    color: #000;
+}
+
+.dua {
+    font-family: 'Courier New', Courier, monospace;
+    color: #000;
 }
