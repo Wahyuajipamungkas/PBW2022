@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar IF - javascript</title>
+</head>
+<body>
+    <h3>Daftar Nama Mahasiswa</h3>
+    <form onsubmit="app.addMhs()" action="javascript: void(0);" method="post" >
+        <input type="text" placeholder="Input Nama Mhs" id="tambahnama">
+        <input type="submit" value="+">
+    </form>
+    <div>
+        <!--Nilai Dinamis (Javascript)-->
+    </div>
+    <table>
+        <thead border="1">
+            <tr><td>Data Mawapres 2023</td></tr>
+        </thead>
+        <tbody id="daftarNama">
+            <!--Nilai Dinamis (Javascript)-->
+        </tbody>
+    </table>
+    <script>
+        var app = new function(){
+            this.mhs = [ 'Riski','Joni','Deni'] ;
+            this.dt = document.getElementById('daftarNama');
+
+            this.barisAll = function() {
+               var data = '' ;
+               
+               if(this.mhs.length > 0) {
+                for(i = 0; i < this.mhs.length; i++) {
+                    data += '<tr>';
+                    data += '<td>' + this.mhs[i] + '<input type="button" value="Del">' ;
+                    data += '</tr></td>';
+                }
+               }
+               return this.dt.innerHTML = data;
+               this.count(this.mhs.length);
+            };
+
+            this.count = function(data) {
+               var el = document.getElementById('counter');
+               if(data) {
+                 el.innerHTML = 'jumlah: ' + data + ' ' + 'Mahasiswa';
+               } else {
+                el.innerHTML = 'Data Kososng';
+               }
+            };
+
+            this.addMhs = function() {
+                //Tambah Mhs
+            }
+        }
+        app.barisAll();
+    </script>
+</body>
+</html>
